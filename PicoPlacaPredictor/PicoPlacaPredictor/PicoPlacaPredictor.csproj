@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigData\PicoPlacaParameters.cs" />
+    <Compile Include="Controller\PicoPlacaController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\InputValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
