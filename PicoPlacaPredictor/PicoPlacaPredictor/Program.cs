@@ -26,11 +26,11 @@ namespace PicoPlacaPredictor
             InputValidator validator = new InputValidator();
 
             //Input
-            Console.WriteLine("Input your full plate number: ");
+            Console.WriteLine("Input your full plate number (PPP### or PPP#### or PP###P): ");
             plateInput = Console.ReadLine();
-            Console.WriteLine("Input the date you want to check out: ");
+            Console.WriteLine("Input the date you want to check out (yyyy-mm-dd): ");
             dateInput = Console.ReadLine();
-            Console.WriteLine("Input the time you want to check out: ");
+            Console.WriteLine("Input the time you want to check out (hh:mm): ");
             timeInput = Console.ReadLine();
 
             //Input Validation

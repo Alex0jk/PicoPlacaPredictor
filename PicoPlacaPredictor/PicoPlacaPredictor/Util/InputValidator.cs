@@ -11,12 +11,12 @@ namespace PicoPlacaPredictor.Util
     {
         public string plateValidator(string plate)
         {
-            string regex = @"^[A-Z]{3}[0-9]{3,4}$";
+            string regex = @"(^[A-Z]{3}[0-9]{3,4}$)|(^[A-Z]{2}[0-9]{3}[A-Z]$)";
             Match match = Regex.Match(plate, regex);
             if (match.Success)
                 return plate;
             else
-                throw new FormatException("Plate doesnt match with the specified format (PPP#### or PPP###)");
+                throw new FormatException("Plate doesnt match with the specified format (PPP#### or PPP### or PP###P)");
         }
         public DateTime dateValidator(string date)
         {

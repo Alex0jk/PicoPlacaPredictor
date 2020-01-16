@@ -30,7 +30,25 @@ namespace PicoPlacaPredictor.Util.Tests
             
             
         }
+        [TestMethod()]
+        public void plateBike_ValidationTest_Expected()
+        {
+            string plateInput = "HX133M";
+            string expected = "HX133M";
+            string result;
+            InputValidator val = new InputValidator();
+            try
+            {
+                result = val.plateValidator(plateInput);
+                Assert.AreEqual(expected, result);
+            }
+            catch
+            {
+                Assert.Fail();
+            }
 
+
+        }
         [TestMethod()]
         public void plate_ValidationTest_NotExpected()
         {

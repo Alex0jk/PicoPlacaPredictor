@@ -35,6 +35,10 @@ namespace PicoPlacaPredictor.Controller
         public bool isCarWithPicoPlaca(string plate,DateTime date,TimeSpan time)
         {
             int lastDigit = plate.Last() - 48;
+            if(lastDigit > 9 || lastDigit < 0)
+            {
+                lastDigit = plate[plate.Length - 2] - 48;
+            }
             int day = (int) date.DayOfWeek;
             if (isLastPlateDigitWithPicoPlaca(lastDigit,day) && isTimeWithPicoPlaca(time))
             {
